@@ -12,7 +12,6 @@ public class Main {
         gamingNotebook.storageCapasity = "2000";
         gamingNotebook.setSpec();
 
-
         Notebook cheapNotebook = new Notebook();
         cheapNotebook.name = "cheapNotebook";
         cheapNotebook.brand = "HP";
@@ -21,15 +20,13 @@ public class Main {
         cheapNotebook.storageCapasity = "256";
         cheapNotebook.setSpec();
 
-
         Notebook workingNotebook = new Notebook();
-        workingNotebook.name = "workingNotebook";
-        workingNotebook.brand = "ACER";
-        workingNotebook.price = "60000";
-        workingNotebook.capasityOfRAM = "16";
-        workingNotebook.storageCapasity = "1000";
-        workingNotebook.setSpec();
-
+        workingNotebook .name = "workingNotebook ";
+        workingNotebook .brand = "Acer";
+        workingNotebook .price = "60000";
+        workingNotebook .capasityOfRAM = "16";
+        workingNotebook .storageCapasity = "1000";
+        workingNotebook .setSpec();
 
         List<Notebook> listOfNotebooks = new ArrayList<>();
         listOfNotebooks.add(gamingNotebook);
@@ -42,8 +39,10 @@ public class Main {
         ) {
             keyList.add(key.getKey());
         }
-
-        System.out.print(comparator(listOfNotebooks,requestPull,keyList));
+        System.out.println("Вам подойдет: ");
+        for (String item: (comparator(listOfNotebooks,requestPull,keyList))) {
+            System.out.println("-" + (comparator(listOfNotebooks,requestPull,keyList)));
+        }
 
 
 
@@ -68,47 +67,38 @@ public class Main {
 
         return request;
     }
-    public static List<String> comparator(List<Notebook> listNote, Map<String, String> request, List<String> keyList){
-        List<String> answerList = new ArrayList<String>();
+    public static Set<String> comparator(List<Notebook> listNote, Map<String, String> request, List<String> keyList){
+        Set<String> answerList = new LinkedHashSet<>();
 
         for (int i = 0; i < listNote.size(); i++) {
             int counter = 0;
             for (int j = 0; j < keyList.size(); j++) {
+
                 switch (keyList.get(j)){
                     case "brand" -> {
                         String requstParametr = request.get(keyList.get(j));
-                        System.out.println(requstParametr);
-                        String notebookParametr = listNote.get(i).getSpecs().get(keyList.get(j));
-                        System.out.println(notebookParametr);
-                        if(!requstParametr.equalsIgnoreCase(notebookParametr)) counter++;
+                        String notebookParametr = (String) listNote.get(i).getSpecs().get(keyList.get(j));
+                        if(requstParametr.equalsIgnoreCase(notebookParametr)) ++counter;
                     }
                     case "price" -> {
                         int requstParametr = Integer.parseInt(request.get(keyList.get(j))) ;
                         int notebookParametr = Integer.parseInt( listNote.get(i).getSpecs().get(keyList.get(j)));
-                        if(! (requstParametr <= notebookParametr)) counter++;
+                        if(requstParametr <= notebookParametr) ++counter;
                     }
                     case "capasityOfRAM" -> {
                         int requstParametr = Integer.parseInt(request.get(keyList.get(j))) ;
                         int notebookParametr = Integer.parseInt( listNote.get(i).getSpecs().get(keyList.get(j)));
-                        if(! (requstParametr <= notebookParametr)) counter++;
+                        if(requstParametr <= notebookParametr) ++counter;
                     }
                     case "storageCapasity" -> {
                         int requstParametr = Integer.parseInt(request.get(keyList.get(j))) ;
                         int notebookParametr = Integer.parseInt( listNote.get(i).getSpecs().get(keyList.get(j)));
-                        if(! (requstParametr <= notebookParametr)) counter++;
+                        if(requstParametr <= notebookParametr) ++counter;
                     }
                 }
-                System.out.println(counter);
-                if (counter>0) break;
-                answerList.add(listNote.get(i).getName());
+                if (counter==keyList.size()) answerList.add(listNote.get(i).getName());
             }
         }
         return answerList;
     }
 }
-
-
-
-
-
-

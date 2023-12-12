@@ -15,7 +15,7 @@ public class Notebook {
         spec.put("price",this.price);
         spec.put("brand", this.brand);
         spec.put("capasityOfRAM", this.capasityOfRAM);
-        spec.put("storageCapasity", this.capasityOfRAM);
+        spec.put("storageCapasity", this.storageCapasity);
     }
 
     public Map<String, String> getSpecs(){
