@@ -1,4 +1,4 @@
-package JavaOOP;
+package JavaOOP.dz1;
 
 import java.lang.reflect.Constructor;
 

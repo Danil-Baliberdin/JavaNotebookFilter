@@ -1,26 +1,51 @@
-import JavaBasics.Notebook;
-import JavaOOP.Circle;
-import JavaOOP.Rectangle;
-import JavaOOP.Square;
-
-import java.util.*;
+import JavaOOP.dz2.Aircraft;
+import JavaOOP.dz2.Boat;
 
 public class Main {
     public static void main(String[] args) {
-        Circle circle = new Circle(5.5);
-        System.out.println("Площадь круга с радиусом "+circle.getRadius()+ " см = "+circle.calculateArea()+" см2");
-        System.out.println("Периметр круга с радиусом "+circle.getRadius()+ " см = "+circle.calculatePerimeter()+" см");
-        System.out.println("=============================================");
-        Rectangle rectangle = new Rectangle(5,4);
-        System.out.println("Длина прямоугольника в см = "+rectangle.getLength()+"\n"+"Ширина прямоугольника в см равна = "+rectangle.getWidth());
-        System.out.println("Площадь прямоугольника в см = "+rectangle.calculateArea());
-        System.out.println("Периметр прямоугольника в см = "+Rectangle.calculatePerimeter());
-        System.out.println("=============================================");
-        Square square = new Square(12.5);
-        System.out.println("Длина квадрата в см = "+square.getLength()+"\n"+"Ширина прямоугольника в см равна = "+square.getWidth());
-        System.out.println("Площадь квадрата в см = "+square.calculateArea());
-        System.out.println("Периметр квадрата в см = "+square.calculatePerimeter());
-        System.out.println("=============================================");
+//        Car car = new Car("Toyota","Cumry",20, 0, 500);
+//        car.startEngine();
+//        car.refuel(1150);
+//        car.displayInfo();
+//        car.startEngine();
+//        car.stopEngine();
+//        car.stopEngine();
+//        car.accelerate(50);
+//        car.startEngine();
+//        car.accelerate(50);
+//        car.stopEngine();
+//        car.brake();
+//        car.stopEngine();
+//        Car car2 = new Car("ota","Cum",20, 0, 500);
+//        car2.displayInfo();
 
+//        Aircraft aircraft = new Aircraft("Aerobus", "kakayato", 2010,3000);
+//        aircraft.displayInfo();
+//        aircraft.accelerate(1000);
+//        aircraft.stopEngine();
+//        aircraft.takeOff();
+//        aircraft.startEngine();
+//        aircraft.takeOff();
+//        aircraft.accelerate(1000);
+//        aircraft.takeOff();
+//        aircraft.displayInfo();
+//        aircraft.stopEngine();
+//        aircraft.land();
+//        aircraft.shassiSwitch();
+//        aircraft.land();
+//        aircraft.brake();
+//        aircraft.stopEngine();
+//        aircraft.displayInfo();
+
+//        Boat boat = new Boat("Suzuki","X3000", 2020,120);
+//        boat.displayInfo();
+//        boat.startSwimming();
+//        boat.stopEngine();
+//        boat.startEngine();
+//        boat.startSwimming();
+//        boat.displayInfo();
+//        boat.stopEngine();
+//        boat.stopSwimming();
+//        boat.stopEngine();
     }
 }

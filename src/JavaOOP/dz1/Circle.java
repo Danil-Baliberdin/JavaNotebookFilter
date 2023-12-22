@@ -1,4 +1,4 @@
-package JavaOOP;
+package JavaOOP.dz1;
 
 public class Circle {
     private static double radius;
