@@ -3,7 +3,7 @@ package JavaBasics;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
- public class Calculator {
+ public class  Calculator {
      Deque<Object> memory = new ArrayDeque<>();
 
      Deque<Object> getMemory() {
