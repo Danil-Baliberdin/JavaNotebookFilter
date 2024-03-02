@@ -1,24 +1,18 @@
-
-
-
+import CONTROL_POINT_toysStore.Controller;
+import CONTROL_POINT_toysStore.data.Lototrone;
+import CONTROL_POINT_toysStore.view.ViewModel;
 import Exeptions.DZ3.Checker;
 import Exeptions.DZ3.ParseController;
 import Exeptions.DZ3.Parser;
 import Exeptions.DZ3.ViewParser;
-import Exeptions.FirstSeminar.RunTimeExeption;
-
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-
 
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        ParseController parseController = new ParseController(new ViewParser(),new Parser(),new Checker());
-        parseController.button();
-        // ПРИМЕРЫ ФАЙЛОВ В ПАПКЕ TXTs, само приложение в папке DZ3
+        Controller lototrone = new Controller(new ViewModel(),new Lototrone());
+        lototrone.letsPlay();
 
 
     }
